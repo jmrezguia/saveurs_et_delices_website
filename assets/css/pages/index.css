@@ -668,7 +668,7 @@ footer p{
   .socials {
     gap: 20px;
   }
-}
+
 
 /* Small mobile */
 @media (max-width: 600px) {
