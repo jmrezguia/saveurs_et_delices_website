@@ -34,6 +34,7 @@ html {
   --border-soft: 1px solid rgba(15, 23, 42, .08);
   --brown: rgb(132, 85, 52);
   --tag-bg: rgb(249, 211, 162);
+  --light-green:#b9c6b3;
 }
 
 /* ------------------- Base ----------------- */
@@ -397,10 +398,12 @@ body {
   color: var(--brown);
 }
 
+
+
 /* ---------------- Footer ---------------- */
 footer{
   margin-top:80px;
-  background:#b9c6b3;
+  background:var(--light-green);
   text-align:center;
   padding:40px 20px;
   color:white;
@@ -641,6 +644,8 @@ footer p{
 
   .card-article {
     width: 100%;
+  cursor: pointer;
+}
   }
 
   .card-article img {

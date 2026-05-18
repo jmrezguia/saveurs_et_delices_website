@@ -78,4 +78,11 @@ class Article {
 
         return $stmt->execute([$id]);
     }
+
+    public function incrementViews($id) {
+    $sql = "UPDATE {$this->table} SET vues = vues + 1 WHERE id = ?";
+    $stmt = $this->pdo->prepare($sql);
+
+    return $stmt->execute([$id]);
+}
 }
