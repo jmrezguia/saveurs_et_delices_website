@@ -1,346 +1,388 @@
+/* 
+   SAVEURS & DÉLICES — Page Administration / Commentaires
+   commentaires-s&d.css
+*/
+
+
+/*  Remise à zéro des marges par défaut du navigateur */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/*  Style général de la page  */
 body {
-    background-color: #fdfbf7;
-    color: #3d2b1f;
+    font-family: Georgia, serif;
+    background-color: white;
+    color: #2d2a26;
 }
 
-.conteneur-admin {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+
+/* 
+   BARRE DE NAVIGATION
+*/
+
+.header{
+  width:100%;
+  height:100px;
+  background:#c6d1c1;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 70px;
 }
 
-/* header */
-
-.en-tete {
-    width: 100%;
-    height: 100px;
-    background: #c6d1c1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 70px;
-}
-  
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    text-decoration: none;
-}
-  
-.logo-textes {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-}
-  
-.logo-titre {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    font-size: 22px;
-    color: #6d8975;
-    letter-spacing: 1.1px;
-}
-  
-.logo-sous-titre {
-    font-size: 16px;
-    letter-spacing: 1.1px;
-    color: #8c7a6b;
-    font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
 }
 
-.navigation {
-    display: flex;
-    gap: 50px;
+.logo-texts {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
 }
-  
-.navigation a {
-    text-decoration: none;
-    color: #222;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: 0.3s;
+
+.logo-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #6d8975;
+  letter-spacing: 1.1px;
 }
-  
-.navigation a:hover {
-    color: #80906f;
+
+.logo-sub {
+  font-size: 16px;
+  letter-spacing: 1.1px;
+  color: brown;
+  font-weight: 600;
 }
-  
-.connexion {
-    text-decoration: none;
-    color: #22222290;
+
+.nav{
+  display:flex;
+  gap:50px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#222;
+  font-size:14px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  transition:0.3s;
+}
+
+.nav a:hover{
+  color:#80906f;
+}
+
+.login{
+  text-decoration:none;
+  color:#22222290;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.login:hover{
+  color:#d9534f;
+}
+
+
+/* 
+   PANNEAU D'ADMINISTRATION
+*/
+
+.panneau-admin {
+    background-color: white;
+    padding: 24px 28px 28px;
+    border-bottom: 1px solid #d4ccbf;   /* séparateur avec la section dessous */
+}
+
+/* Titre "Administration" avec son icône */
+.titre-admin {
+    font-size: 1.35rem;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-  
-.connexion:hover {
-    color: #d9534f;
-}
-
-.declencheur-menu {
-    display: none;
-}
-
-.en-tete-admin {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 30px;
-}
-
-.section-titre h1 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 5px;
-    color: #21160f;
-}
-
-.section-titre p {
-    color: #8c7a6b;
-    font-size: 14px;
-}
-
-.btn-deconnexion {
-    background: transparent;
-    border: 1px solid #d9ceb2;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    color: #3d2b1f;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-}
-
-.btn-deconnexion:hover {
-    background-color: #f5efe6;
-}
-
-/* Cayégories */
-
-.onglets {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 40px;
-}
-
-.onglet {
-    padding: 12px 24px;
-    border-radius: 25px;
-    border: 1px solid #d9ceb2;
-    background: white;
-    color: #3d2b1f;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
+    font-family: Georgia, serif;
+    color: #2d2a26;
+    margin-bottom: 18px;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.onglet:hover {
-    background-color: #f5efe6;
+.titre-admin i {
+    font-size: 1.1rem;
+    color: #2d2a26;
 }
 
-.onglet.actif {
-    background-color: #705335;
-    color: white;
-    border-color: #705335;
-}
-
-.section-stats h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    color: #21160f;
-}
-
-.grille-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.carte {
-    border: 1px solid #ebdccb;
-    border-radius: 16px;
-    padding: 25px;
+/* Ligne de navigation : Articles / Commentaires / Statistiques */
+.nav-admin {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    gap: 12px;
+    align-items: flex-end;  /* icône + bouton alignés par le bas */
+    justify-content: space-evenly;
 }
 
-.carte-info p {
-    color: #8c7a6b;
-    font-weight: 600;
-    font-size: 15px;
-    margin-bottom: 15px;
-}
-
-.carte-info .nombre {
-    font-size: 42px;
-    font-weight: 700;
-    color: #21160f;
-}
-
-.carte-icone {
-    font-size: 24px;
-    color: #8c7a6b;
-    opacity: 0.6;
-    margin-top: 4px;
-}
-
-/* Liste articles */
-
-.articles-consultes {
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-    border: 1px solid #ebdccb;
-    border-radius: 16px;
-    padding: 25px;
-    margin-top: 20px;
-
-}
-
-.articles-consultes h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    font-weight: 590;
-    color: #21160f;
-}
-
-.liste-articles {
-    list-style: none;
+/* Bloc individuel : icône empilée au-dessus du bouton */
+.item-admin {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-}
-
-.ligne-article {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fdfbf7; 
-    border: 1px solid #ebdccb50;
-    padding: 20px 20px;
-    border-radius: 12px;
-}
-
-.bloc-gauche {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.rond-position {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    font-weight: 700;
-    height: 39px;
-    background-color: #8c7a6b; 
-    color: white;
-    border-radius: 50%;
-    font-size: 14px;
-}
-
-.titre-article {
-    font-weight: 590;
-    color: #3d2b1f;
-}
-
-.bloc-vues {
-    display: flex;
     align-items: center;
     gap: 8px;
-    color: #8c7a6b;
-    font-weight: 600;
+    flex: 1;
 }
 
-/* footer */
+/* Icône au-dessus du bouton */
+.icone-admin {
+    font-size: 1.3rem;
+    color: #2d2a26;
+}
 
-footer {
-    margin-top: 80px;
-    background: #b9c6b3;
+/* Bouton pill (Articles, Commentaires, Statistiques) */
+.bouton-admin {
+    display: inline-block;
+    padding: 10px 0;
+    width: 79%;
     text-align: center;
-    padding: 40px 20px;
-    color: white;
+    background-color: #8B9D83;
+    border: 1.5px solid #8B9D83;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-family: Arial, sans-serif;
+    color: white ;
+    text-decoration: none;
+    cursor: pointer;
+     
 }
-  
-footer h3 {
+
+.bouton-admin:hover {
+    background-color: #8B9D83;
+    color: #ffffff;
+}
+
+/* État actif : onglet courant mis en valeur */
+.bouton-admin--actif {
+    background-color: #8B9D83;
+    color: #ffffff;
+}
+
+
+/* ============================================
+   SECTION MODÉRATION DES COMMENTAIRES
+   ============================================ */
+
+.section-moderation {
+    padding: 32px 40px 52px;
+}
+
+/* Titre "Modération des commentaires" */
+.titre-moderation {
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: Georgia, serif;
+    color: #2d2a26;
+    margin-bottom: 22px;
+}
+
+
+/* 
+   CARTES COMMENTAIRES
+*/
+
+.carte-commentaire {
+    background-color: #ffffff;
+    border: 2px solid #22c55e;      /* vert vif : commentaire approuvé */
+    border-radius: 10px;
+    padding: 20px 26px;
+    margin-bottom: 16px;
+}
+
+/* En-tête : auteur + date + article à gauche  /  statut à droite */
+.entete-commentaire {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 10px;
 }
-  
-footer p {
-    margin-bottom: 25px;
-}
-  
-.reseaux-sociaux {
+
+/* Bloc gauche : auteur, date, article */
+.infos-auteur {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 4px;
 }
-  
-.reseaux-sociaux a {
-    color: white;
-    text-decoration: none;
+
+/* Auteur et date sur la même ligne */
+.ligne-auteur {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
-/* Media queries */
+.nom-auteur {
+    font-weight: bold;
+    font-size: 0.95rem;
+    font-family: Arial, sans-serif;
+    color: #2d2a26;
+}
 
-@media (max-width: 1024px) {
-    .en-tete {
-        padding: 0 30px;
-    }
+.date-commentaire {
+    font-size: 0.85rem;
+    color: #6b6560;
+    font-family: Arial, sans-serif;
+}
 
-    .navigation {
-        display: none; 
-        flex-direction: column;
-        position: absolute;
-        top: 100px;
-        left: 0;
-        width: 100%;
-        background: #c6d1c1;
-        padding: 20px;
-        gap: 20px;
-    }
+/* Nom de l'article commenté */
+.article-ref {
+    font-size: 0.80rem;
+    color: #6b6560;
+    font-family: Arial, sans-serif;
+}
 
-    .navigation.ouvert {
-        display: flex;
-    }
+/* Badge de statut (Approuvé / En attente…) */
+.statut {
+    font-size: 0.88rem;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
-    .connexion {
+.statut--approuve {
+    color: #22c55e;     /* vert : même couleur que la bordure de la carte */
+}
+
+/* Texte du commentaire */
+.texte-commentaire {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #2d2a26;
+    margin-bottom: 16px;
+}
+
+/* Zone des boutons d'action */
+.actions-commentaire {
+    display: flex;
+    gap: 10px;
+}
+
+/* Bouton "Rejeter" — ambre */
+.bouton-rejeter {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 20px;
+    background-color: #d97706;      /* ambre doré */
+    color: #ffffff;
+    border: none;
+    border-radius: 22px;
+    font-size: 0.85rem;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.bouton-rejeter:hover {
+    background-color: #b45309; /* ambre plus foncé au survol */
+}
+
+/* Bouton "Supprimer" — rouge */
+.bouton-supprimer {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 20px;
+    background-color: #dc2626;      /* rouge vif */
+    color: #ffffff;
+    border: none;
+    border-radius: 22px;
+    font-size: 0.85rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.bouton-supprimer:hover {
+    background-color: #b91c1c; /* rouge plus foncé au survol */
+}
+
+
+/* 
+   PIED DE PAGE
+*/
+
+/* ---------------- Footer ---------------- */
+footer{
+  margin-top:80px;
+  background:#b9c6b3;
+  text-align:center;
+  padding:40px 20px;
+  color:white;
+}
+
+footer h3{
+  margin-bottom:10px;
+}
+
+footer p{
+  margin-bottom:25px;
+}
+
+.socials{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.socials a{
+  color:white;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+
+/* 
+   VERSION MOBILE (écrans < 660px)
+*/
+
+@media (max-width: 660px) {
+
+    /* Masquer les liens de navigation sur mobile */
+    .liens-nav {
         display: none;
     }
 
-    .declencheur-menu {
-        display: block;
-        background: transparent;
-        border: none;
-        font-size: 24px;
-        color: #3d2b1f;
-        cursor: pointer;
+    /* Admin nav en colonne, centré */
+    .nav-admin {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    /* Réduire les marges de la section commentaires */
+    .section-moderation {
+        padding: 20px 14px 32px;
+    }
+
+    /* Panneau admin */
+    .panneau-admin {
+        padding: 18px 14px 22px;
+    }
+
+    /* Liens sociaux en colonne */
+    .liens-sociaux {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
     }
 }

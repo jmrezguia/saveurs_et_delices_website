@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion administrateur | Saveurs & Délices</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/SAVEURS_ET_DELICES/assets/css/pages/login.css">
+
+    <script src="/SAVEURS_ET_DELICES/assets/js/main.js" defer></script>
 </head>
+
 <body>
 
     <!-- header -->
@@ -18,13 +22,13 @@
                 <span class="logo-sous-titre">Blog culinaire gourmand</span>
             </div>
         </a>
-        
+
         <nav class="navigation" id="navigationPrincipale" aria-label="Menu principal">
-            <a href="index.php"><i class="fa-solid fa-house" aria-hidden="true"></i> Accueil</a>
-            <a href="apropos.php"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> À propos</a>
-            <a href="contact.php"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>
+            <a href="/SAVEURS_ET_DELICES/public-pages/index.php"><i class="fa-solid fa-house" aria-hidden="true"></i> Accueil</a>
+            <a href="/SAVEURS_ET_DELICES/public-pages/apropos.php"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> À propos</a>
+            <a href="/SAVEURS_ET_DELICES/public-pages/contact.php"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>
         </nav>
-        
+
         <a href="admin.php" class="connexion">
             <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i> Connexion
         </a>
@@ -79,7 +83,7 @@
     <footer>
         <h3>© 2026 Saveurs & Délices. Tous droits réservés.</h3>
         <p>Un blog culinaire pour partager la passion de la cuisine</p>
-    
+
         <div class="reseaux-sociaux">
             <a href="https://www.instagram.com/saveurs_et_delices_traiteur/" target="_blank" aria-label="Instagram">
                 <i class="fa-brands fa-instagram" aria-hidden="true"></i> SAVEURSDELICES
@@ -92,18 +96,6 @@
             </a>
         </div>
     </footer>
-
-    <!-- Js menu burger -->
-
-    <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const declencheur = document.querySelector('.declencheur-menu');
-    const navigation = document.querySelector('.navigation');
-
-    declencheur.addEventListener('click', () => {
-      navigation.classList.toggle('ouvert');
-    });
-  });
-</script>
 </body>
+
 </html>

@@ -85,7 +85,7 @@ $articles = $articleModel->getAll();
 
     </nav>
 
-    <a href="#" class="login" aria-label="Connexion">
+    <a href="/SAVEURS_ET_DELICES/Login.php" class="login" aria-label="Connexion">
       <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
       Connexion
     </a>

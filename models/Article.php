@@ -45,7 +45,8 @@ class Article {
          $data["contenu"],
          $data["categorie"],
          $data["image_url"],
-    "Admin",
+         $data["auteur"],
+    
     0
 ]);
     }
