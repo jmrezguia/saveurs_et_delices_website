@@ -20,12 +20,12 @@
         </a>
          
         <nav class="navigation" id="navigationPrincipale">
-            <a href="index.php"><i class="fa-solid fa-house"></i> Accueil</a>
-            <a href="apropos.php" class="actif"><i class="fa-solid fa-circle-info"></i> À propos</a>
+            <a href="/SAVEURS_ET_DELICES/public-pages/index.php"><i class="fa-solid fa-house"></i> Accueil</a>
+            <a href="/SAVEURS_ET_DELICES/public-pages/apropos.php" class="actif"><i class="fa-solid fa-circle-info"></i> À propos</a>
             <a href="contact.php"><i class="fa-solid fa-envelope"></i> Contact</a>
         </nav>
          
-        <a href="admin.php" class="connexion">
+        <a href="/SAVEURS_ET_DELICES/Login.php" class="connexion">
             <i class="fa-solid fa-arrow-right-to-bracket"></i> Connexion
         </a>
 
