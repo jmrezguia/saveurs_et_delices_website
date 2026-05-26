@@ -68,17 +68,17 @@ $articles = $articleModel->getAll();
 
     <nav class="nav" aria-label="Navigation principale">
 
-      <a href="#">
+      <a href="/SAVEURS_ET_DELICES/public-pages/index.php">
         <i class="fa-solid fa-house" aria-hidden="true"></i>
         Accueil
       </a>
 
-      <a href="#">
+      <a href="/SAVEURS_ET_DELICES/public-pages/apropos.php">
         <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
         À propos
       </a>
 
-      <a href="#">
+      <a href="/SAVEURS_ET_DELICES/public-pages/contact.php">
         <i class="fa-solid fa-envelope" aria-hidden="true"></i>
         Contacts
       </a>
@@ -254,17 +254,17 @@ $articles = $articleModel->getAll();
 
     <div class="socials">
 
-      <a href="#">
+    <a href="https://www.instagram.com/saveurs_et_delices_traiteur/" target="_blank" aria-label="Instagram">
         <i class="fa-brands fa-instagram" aria-hidden="true"></i>
         SAVEURSDELICES
       </a>
 
-      <a href="#">
+      <a href="https://www.facebook.com/saveursetdelices.net/" target="_blank" aria-label="Facebook">
         <i class="fa-brands fa-twitter" aria-hidden="true"></i>
         @saveursdelices
       </a>
 
-      <a href="#">
+      <a href="https://www.youtube.com/channel/UCkjZTxEpBRsdzaHDBz9t2GQ/videos" target="_blank" aria-label="Youtube">
         <i class="fa-brands fa-youtube" aria-hidden="true"></i>
         SAVEURSDELICES
       </a>

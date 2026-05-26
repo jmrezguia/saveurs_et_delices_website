@@ -28,8 +28,13 @@
             <a href="/SAVEURS_ET_DELICES/public-pages/apropos.php"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> À propos</a>
             <a href="/SAVEURS_ET_DELICES/public-pages/contact.php"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>
         </nav>
+<<<<<<< Updated upstream
 
         <a href="admin.php" class="connexion">
+=======
+        
+        <a href="/SAVEURS_ET_DELICES/Login.php" class="connexion">
+>>>>>>> Stashed changes
             <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i> Connexion
         </a>
 
