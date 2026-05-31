@@ -57,7 +57,8 @@ class Article {
     SET titre = ?, auteur = ?, resume = ?, contenu = ?, categorie = ?, image_url = ?, tags = ?
     WHERE id = ?";
 
-    $stmt = $this->pdo->prepare($sql);
+    $stmt = $this->pdo->prepare($sql
+    );
 
     return $stmt->execute([
         $data["titre"],

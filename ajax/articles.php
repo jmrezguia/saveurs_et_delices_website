@@ -12,6 +12,9 @@ $article = new Article($pdo);
 
 $action = $_POST["action"] ?? $_GET["action"] ?? "";
 
+
+
+
 function uploadImage($inputName = "image") {
 
     if (!isset($_FILES[$inputName])) {
@@ -33,6 +36,7 @@ function uploadImage($inputName = "image") {
     if (!is_dir($uploadDir)) {
         mkdir($uploadDir, 0777, true);
     }
+
 
     $extension = strtolower(pathinfo($_FILES[$inputName]["name"], PATHINFO_EXTENSION));
 
@@ -86,6 +90,8 @@ if ($action === "create") {
     ]);
 
     exit;
+
+    
 }
 
 if ($action === "update") {
@@ -162,3 +168,4 @@ echo json_encode([
     "success" => false,
     "message" => "Action inconnue"
 ]);
+
