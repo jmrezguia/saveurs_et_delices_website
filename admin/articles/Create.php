@@ -94,21 +94,56 @@
         required></textarea>
     </div>
 
+    <!-- INGREDIENTS -->
+
+<div class="form-group">
+  <label>Ingrédients *</label>
+
+  <textarea
+    name="ingredients"
+    rows="5"
+    placeholder="Ex: 500g de farine, 3 œufs, 200ml de lait..."
+    required></textarea>
+</div>
+
+<!-- PREPARATION -->
+
+<div class="form-group">
+  <label>Préparation *</label>
+
+  <textarea
+    name="preparation"
+    rows="6"
+    placeholder="Décrivez les étapes de préparation de la recette..."
+    required></textarea>
+</div>
+
+<!-- CUISSON -->
+
+<div class="form-group">
+  <label>Temps de cuisson *</label>
+
+  <input
+    type="text"
+    name="cuisson"
+    placeholder="Ex: 30 min"
+    required>
+</div>
+
     <!-- GRID -->
 
-    <div class="form-grid">
+    <div class="form-group">
+  <label>Catégorie *</label>
 
-      <div class="form-group">
-        <label>Catégorie *</label>
-
-        <select name="categorie" required>
-          <option value="">Choisir une catégorie</option>
-          <option>Entrée</option>
-          <option>Dessert</option>
-          <option>Plat principal</option>
-          <option>Soupe</option>
-        </select>
-      </div>
+  <select name="id_categorie" required>
+    <option value="">Choisir une catégorie</option>
+    <option value="1">Pâtisserie</option>
+    <option value="2">Soupe</option>
+    <option value="3">Plats principaux</option>
+    <option value="4">Entrée</option>
+    <option value="5">Dessert</option>
+  </select>
+</div>
 
       <div class="form-group">
         <label>Image de l'article *</label>

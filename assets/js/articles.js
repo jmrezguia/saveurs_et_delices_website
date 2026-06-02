@@ -1,6 +1,4 @@
-
 $(document).ready(function () {
-
   // CREATE ARTICLE
   $("#createArticleForm").on("submit", function (e) {
     e.preventDefault();
@@ -33,10 +31,9 @@ $(document).ready(function () {
       error: function (xhr) {
         console.log(xhr.responseText);
         alert("Erreur AJAX lors de l'ajout");
-      }
+      },
     });
   });
-
 
   // UPDATE ARTICLE
   $("#editArticleForm").on("submit", function (e) {
@@ -70,10 +67,9 @@ $(document).ready(function () {
       error: function (xhr) {
         console.log(xhr.responseText);
         alert("Erreur AJAX lors de la modification");
-      }
+      },
     });
   });
-
 
   // DELETE ARTICLE
   $(document).on("click", ".deleteArticleBtn", function () {
@@ -85,7 +81,7 @@ $(document).ready(function () {
         type: "POST",
         data: {
           action: "delete",
-          id: id
+          id: id,
         },
         dataType: "json",
 
@@ -99,38 +95,51 @@ $(document).ready(function () {
 
         error: function () {
           alert("Erreur AJAX lors de la suppression");
-        }
+        },
       });
     }
   });
-
 
   // ANNULER
   $(".btn-cancel").on("click", function () {
     window.location.href = "/SAVEURS_ET_DELICES/admin/Dashboard.php";
   });
 
-
   // AJOUTER TAG
-  
+
+
+// AJOUTER TAG
 
 let tagsArray = [];
 
+$("#tagsHidden").val()
+  .split(",")
+  .forEach(function (tag) {
+    tag = tag.trim();
+
+    if (tag !== "" && !tagsArray.includes(tag)) {
+      tagsArray.push(tag);
+    }
+  });
+
+$("#tagsHidden").val(tagsArray.join(","));
+
 $(".btn-tag").on("click", function () {
-
   const input = $("#tagInput");
-
   const value = input.val().trim();
 
   if (value === "") {
-
     alert("Veuillez saisir un tag");
+    return;
+  }
 
+  if (tagsArray.includes(value)) {
+    alert("Ce tag existe déjà");
+    input.val("");
     return;
   }
 
   tagsArray.push(value);
-
   $("#tagsHidden").val(tagsArray.join(","));
 
   $(".tags-list").append(`
@@ -141,25 +150,17 @@ $(".btn-tag").on("click", function () {
   `);
 
   input.val("");
-
 });
 
 $(document).on("click", ".remove-tag", function () {
-
   const tag = $(this).parent().data("tag");
 
-  tagsArray = tagsArray.filter(item => item !== tag);
+  tagsArray = tagsArray.filter(function (item) {
+    return item !== tag;
+  });
 
   $("#tagsHidden").val(tagsArray.join(","));
 
   $(this).parent().remove();
-
 });
-
-
-  // SUPPRIMER TAG VISUELLEMENT
-  $(document).on("click", ".remove-tag", function () {
-    $(this).closest(".tag-item").remove();
-  });
-
 });

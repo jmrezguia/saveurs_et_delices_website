@@ -8,8 +8,17 @@ $database = new Database();
 $pdo = $database->connect();
 
 $articleModel = new Article($pdo);
-$articles = $articleModel->getAll();
 
+$idCategorie = $_GET["categorie"] ?? null;
+$search = $_GET["search"] ?? "";
+
+if (!empty($search)) {
+    $articles = $articleModel->search($search);
+} elseif ($idCategorie) {
+    $articles = $articleModel->getByCategory($idCategorie);
+} else {
+    $articles = $articleModel->getAll();
+}
 ?>
 
 <!DOCTYPE html>
@@ -110,21 +119,22 @@ $articles = $articleModel->getAll();
         </p>
 
         <!-- Zone de recherche -->
-        <div class="hero-search">
+        <form method="GET" action="index.php" class="hero-search">
 
-          <input
-            type="search"
-            placeholder="Chercher une recette..."
-            class="search-input"
-            aria-label="Rechercher une recette">
+    <input
+        type="search"
+        name="search"
+        placeholder="Chercher une recette..."
+        class="search-input"
+        aria-label="Rechercher une recette">
 
-          <span class="search-badge" aria-hidden="true">
-            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-          </span>
+    <button type="submit" hidden></button>
 
-        </div>
+    <span class="search-badge">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </span>
 
-      </div>
+</form>
 
     </section>
 
@@ -142,13 +152,42 @@ $articles = $articleModel->getAll();
             aria-label="Catégories de recettes">
 
             <ul class="nav-list">
-              <li><a href="#" class="nav-style">Toutes</a></li>
-              <li><a href="#" class="nav-style">Plats principaux</a></li>
-              <li><a href="#" class="nav-style">Desserts</a></li>
-              <li><a href="#" class="nav-style">Entrées</a></li>
-              <li><a href="#" class="nav-style">Soupes</a></li>
-              <li><a href="#" class="nav-style">Pâtisserie</a></li>
-            </ul>
+  <li>
+    <a href="/SAVEURS_ET_DELICES/public-pages/index.php#article" class="nav-style">
+      Toutes
+    </a>
+  </li>
+
+  <li>
+    <a href="/SAVEURS_ET_DELICES/public-pages/index.php?categorie=3#article" class="nav-style">
+      Plats principaux
+    </a>
+  </li>
+
+  <li>
+    <a href="/SAVEURS_ET_DELICES/public-pages/index.php?categorie=5#article" class="nav-style">
+      Desserts
+    </a>
+  </li>
+
+  <li>
+    <a href="/SAVEURS_ET_DELICES/public-pages/index.php?categorie=4#article" class="nav-style">
+      Entrées
+    </a>
+  </li>
+
+  <li>
+    <a href="/SAVEURS_ET_DELICES/public-pages/index.php?categorie=2#article" class="nav-style">
+      Soupes
+    </a>
+  </li>
+
+  <li>
+    <a href="/SAVEURS_ET_DELICES/public-pages/index.php?categorie=1#article" class="nav-style">
+      Pâtisserie
+    </a>
+  </li>
+</ul>
 
           </nav>
 
