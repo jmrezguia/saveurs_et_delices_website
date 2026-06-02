@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link rel="stylesheet" href="../assets/css/pages/apropos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+=======
+    <link rel="stylesheet" href="../assets/css/pages/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+>>>>>>> 2a5e71f (add all files from walid)
     <title>À propos | Saveurs & Délices</title>
 </head>
 <body>
@@ -20,6 +25,7 @@
         </a>
          
         <nav class="navigation" id="navigationPrincipale">
+<<<<<<< HEAD
             <a href="/SAVEURS_ET_DELICES/public-pages/index.php"><i class="fa-solid fa-house"></i> Accueil</a>
             <a href="/SAVEURS_ET_DELICES/public-pages/apropos.php" class="actif"><i class="fa-solid fa-circle-info"></i> À propos</a>
             <a href="contact.php"><i class="fa-solid fa-envelope"></i> Contact</a>
@@ -29,6 +35,16 @@
             <i class="fa-solid fa-arrow-right-to-bracket"></i> Connexion
         </a>
 
+=======
+            <a href="index.php"><i class="fa-solid fa-house"></i> Accueil</a>
+            <a href="apropos.php" class="actif"><i class="fa-solid fa-circle-info"></i> À propos</a>
+            <a href="contact.php"><i class="fa-solid fa-envelope"></i> Contact</a>
+            <a href="/SAVEURS_ET_DELICES/Login.php" class="connexion">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i> Connexion
+        </a>
+        </nav>
+         
+>>>>>>> 2a5e71f (add all files from walid)
         <button class="declencheur-menu" id="declencheurMenu" aria-label="Ouvrir le menu">
             <i class="fa-solid fa-bars"></i>
         </button>

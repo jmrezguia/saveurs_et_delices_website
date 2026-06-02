@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<?php
+ini_set('display_errors',true);
+?>
+>>>>>>> 2a5e71f (add all files from walid)
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,6 +21,7 @@
     ============================= -->
    <!-- ======================= HEADER ======================= -->
  <header class="header">
+<<<<<<< HEAD
 
    <a href="/SAVEURS_ET_DELICES/public-pages/index.php" class="logo" aria-label="Aller à l'accueil">
         <img src="logo.webp"
@@ -55,6 +62,31 @@
     </a>
 
   </header>
+=======
+  <a href="/SAVEURS_ET_DELICES/public-pages/index.php" class="logo">
+    <img src="/SAVEURS_ET_DELICES/assets/images/logos/logo.webp" class="logo-img" alt="Logo Saveurs & Délices" width="81" height="66">
+
+    <div class="logo-texts">
+      <span class="logo-text">SAVEURS & DÉLICES</span>
+      <span class="logo-sub">Blog culinaire gourmand</span>
+    </div>
+  </a>
+
+  <button class="nav-toggle" aria-label="Ouvrir le menu">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <nav class="nav">
+    <a href="index.php"><i class="fa-solid fa-house"></i> Accueil</a>
+    <a href="apropos.php"><i class="fa-solid fa-circle-info"></i> À propos</a>
+    <a href="contact.php"><i class="fa-solid fa-envelope"></i> Contacts</a>
+    <a href="/SAVEURS_ET_DELICES/Login.php" class="login">
+    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+    Connexion
+  </a>
+  </nav>
+</header>
+>>>>>>> 2a5e71f (add all files from walid)
     <!-------
          CONTENU PRINCIPAL
     ------>
@@ -129,6 +161,17 @@
                             <textarea id="message" name="message" required></textarea>
                         </div>
 
+<<<<<<< HEAD
+=======
+                        <div class="groupe-champ">
+                            <p classe="titre-rgpd">RGPD </p>
+
+                           <div class="groupe-checkbox">
+                            <input type="checkbox" id="accept" name="RGPD" required>
+                            <label for="accept"> J’accepte que les données renseignées dans ce formulaire soient utilisées uniquement pour répondre à ma demande.<span class="obligatoire" aria-label="champ obligatoire">*</span></label>
+                           </div> 
+                             
+>>>>>>> 2a5e71f (add all files from walid)
                         <button type="submit" class="bouton-envoyer"> <i class="fa-regular fa-paper-plane"></i> Envoyer</button>
 
                     </form>

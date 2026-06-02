@@ -7,7 +7,11 @@ class Database{
 private $host= "localhost";
 private $dbname = "saveurs_et_delices";
 private $username = "root";
+<<<<<<< HEAD
 private $password = "";
+=======
+private $password = "root";
+>>>>>>> 2a5e71f (add all files from walid)
 
 public function connect(){
     try{
@@ -27,6 +31,9 @@ public function connect(){
 
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2a5e71f (add all files from walid)
 }
 ?>

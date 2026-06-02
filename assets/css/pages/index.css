@@ -34,7 +34,10 @@ html {
   --border-soft: 1px solid rgba(15, 23, 42, .08);
   --brown: rgb(132, 85, 52);
   --tag-bg: rgb(249, 211, 162);
+<<<<<<< HEAD
   --light-green:#b9c6b3;
+=======
+>>>>>>> 2a5e71f (add all files from walid)
 }
 
 /* ------------------- Base ----------------- */
@@ -398,12 +401,19 @@ body {
   color: var(--brown);
 }
 
+<<<<<<< HEAD
 
 
 /* ---------------- Footer ---------------- */
 footer{
   margin-top:80px;
   background:var(--light-green);
+=======
+/* ---------------- Footer ---------------- */
+footer{
+  margin-top:80px;
+  background:#b9c6b3;
+>>>>>>> 2a5e71f (add all files from walid)
   text-align:center;
   padding:40px 20px;
   color:white;
@@ -644,8 +654,11 @@ footer p{
 
   .card-article {
     width: 100%;
+<<<<<<< HEAD
   cursor: pointer;
 }
+=======
+>>>>>>> 2a5e71f (add all files from walid)
   }
 
   .card-article img {
@@ -668,7 +681,11 @@ footer p{
   .socials {
     gap: 20px;
   }
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> 2a5e71f (add all files from walid)
 
 /* Small mobile */
 @media (max-width: 600px) {

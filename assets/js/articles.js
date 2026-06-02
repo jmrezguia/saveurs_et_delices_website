@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2a5e71f (add all files from walid)
 $(document).ready(function () {
 
   // CREATE ARTICLE

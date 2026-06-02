@@ -12,9 +12,12 @@ $article = new Article($pdo);
 
 $action = $_POST["action"] ?? $_GET["action"] ?? "";
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 2a5e71f (add all files from walid)
 function uploadImage($inputName = "image") {
 
     if (!isset($_FILES[$inputName])) {
@@ -37,7 +40,10 @@ function uploadImage($inputName = "image") {
         mkdir($uploadDir, 0777, true);
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2a5e71f (add all files from walid)
     $extension = strtolower(pathinfo($_FILES[$inputName]["name"], PATHINFO_EXTENSION));
 
     $allowedExtensions = ["jpg", "jpeg", "png", "webp", "gif"];
@@ -90,8 +96,11 @@ if ($action === "create") {
     ]);
 
     exit;
+<<<<<<< HEAD
 
     
+=======
+>>>>>>> 2a5e71f (add all files from walid)
 }
 
 if ($action === "update") {
@@ -167,5 +176,9 @@ if ($action === "getAll") {
 echo json_encode([
     "success" => false,
     "message" => "Action inconnue"
+<<<<<<< HEAD
 ]);
 
+=======
+]);
+>>>>>>> 2a5e71f (add all files from walid)

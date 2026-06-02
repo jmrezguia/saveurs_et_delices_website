@@ -45,8 +45,12 @@ class Article {
          $data["contenu"],
          $data["categorie"],
          $data["image_url"],
+<<<<<<< HEAD
          $data["auteur"],
     
+=======
+    "Admin",
+>>>>>>> 2a5e71f (add all files from walid)
     0
 ]);
     }
@@ -57,8 +61,12 @@ class Article {
     SET titre = ?, auteur = ?, resume = ?, contenu = ?, categorie = ?, image_url = ?, tags = ?
     WHERE id = ?";
 
+<<<<<<< HEAD
     $stmt = $this->pdo->prepare($sql
     );
+=======
+    $stmt = $this->pdo->prepare($sql);
+>>>>>>> 2a5e71f (add all files from walid)
 
     return $stmt->execute([
         $data["titre"],
@@ -80,6 +88,7 @@ class Article {
 
         return $stmt->execute([$id]);
     }
+<<<<<<< HEAD
 
     public function incrementViews($id) {
     $sql = "UPDATE {$this->table} SET vues = vues + 1 WHERE id = ?";
@@ -87,4 +96,6 @@ class Article {
 
     return $stmt->execute([$id]);
 }
+=======
+>>>>>>> 2a5e71f (add all files from walid)
 }

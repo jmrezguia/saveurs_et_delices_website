@@ -94,6 +94,19 @@ body {
   color:#d9534f;
 }
 
+<<<<<<< HEAD
+=======
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  font-size: 24px;
+  color: #526e5a;
+  cursor: pointer;
+  z-index: 1200;
+}
+
+>>>>>>> 2a5e71f (add all files from walid)
 /* 
    CONTENU PRINCIPAL
     */
@@ -244,6 +257,34 @@ main {
     font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
+/* Appliquer le style blanc au titre RGPD */
+.titre-rgpd {
+    font-size: 0.78rem;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: 0; /* Évite un espace inutile au-dessus de la checkbox */
+}
+
+/* Aligner la checkbox et son texte horizontalement */
+.groupe-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Aligne la case avec le début du texte si le texte passe sur 2 lignes */
+    gap: 10px; /* Espace entre la case et le texte */
+    margin-top: 5px;
+}
+
+/* Éviter que la checkbox hérite du padding des autres champs */
+.groupe-checkbox input[type="checkbox"] {
+    padding: 0;
+    width: auto;
+    margin-top: 2px; /* Petit ajustement pour l'aligner parfaitement avec le texte */
+}
+
+>>>>>>> 2a5e71f (add all files from walid)
 /* L'astérisque rouge des champs obligatoires */
 .obligatoire {
     color: #ffaaaa;
