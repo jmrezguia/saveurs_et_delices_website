@@ -140,12 +140,47 @@ body{
 .form-group textarea{
   resize:none;
 }
+/* Ingrédients et Préparation */
+
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group textarea:focus {
+  border-color: #9c6b3f;
+  box-shadow: 0 0 5px rgba(156, 107, 63, 0.2);
+}
+
+/* Champ cuisson */
+
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input[type="text"]:focus {
+  border-color: #9c6b3f;
+  box-shadow: 0 0 5px rgba(156, 107, 63, 0.2);
+}
 
 .form-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:20px;
 }
+
 
 .tags-box{
   display:flex;

@@ -152,6 +152,40 @@ $articleTags = !empty($article["tags"]) ? explode(",", $article["tags"]) : [];
 
     </div>
 
+    <!-- INGREDIENTS -->
+
+<div class="form-group">
+    <label>Ingrédients *</label>
+
+    <textarea
+        name="ingredients"
+        rows="5"
+        required><?= htmlspecialchars($article['ingredients'] ?? ''); ?></textarea>
+</div>
+
+<!-- PREPARATION -->
+
+<div class="form-group">
+    <label>Préparation *</label>
+
+    <textarea
+        name="preparation"
+        rows="6"
+        required><?= htmlspecialchars($article['preparation'] ?? ''); ?></textarea>
+</div>
+
+<!-- CUISSON -->
+
+<div class="form-group">
+    <label>Temps de cuisson *</label>
+
+    <input
+        type="text"
+        name="cuisson"
+        value="<?= htmlspecialchars($article['cuisson'] ?? ''); ?>"
+        required>
+</div>
+
     <!-- GRID -->
 
     <div class="form-grid">
@@ -160,29 +194,29 @@ $articleTags = !empty($article["tags"]) ? explode(",", $article["tags"]) : [];
 
         <label>Catégorie *</label>
 
-        <select name="categorie" required>
+        <select name="id_categorie" required>
 
-          <option value="Entrée" <?= $article['categorie'] === 'Entrée' ? 'selected' : ''; ?>>
-            Entrée
-          </option>
+    <option value="1" <?= $article['id_categorie'] == 1 ? 'selected' : ''; ?>>
+        Pâtisserie
+    </option>
 
-          <option value="Plats principaux" <?= $article['categorie'] === 'Plats principaux' ? 'selected' : ''; ?>>
-            Plats principaux
-          </option>
+    <option value="2" <?= $article['id_categorie'] == 2 ? 'selected' : ''; ?>>
+        Soupe
+    </option>
 
-          <option value="Dessert" <?= $article['categorie'] === 'Dessert' ? 'selected' : ''; ?>>
-            Dessert
-          </option>
+    <option value="3" <?= $article['id_categorie'] == 3 ? 'selected' : ''; ?>>
+        Plats principaux
+    </option>
 
-          <option value="Soupe" <?= $article['categorie'] === 'Soupe' ? 'selected' : ''; ?>>
-            Soupe
-          </option>
+    <option value="4" <?= $article['id_categorie'] == 4 ? 'selected' : ''; ?>>
+        Entrée
+    </option>
 
-          <option value="Pâtisserie" <?= $article['categorie'] === 'Pâtisserie' ? 'selected' : ''; ?>>
-            Pâtisserie
-          </option>
+    <option value="5" <?= $article['id_categorie'] == 5 ? 'selected' : ''; ?>>
+        Dessert
+    </option>
 
-        </select>
+</select>
 
       </div>
 

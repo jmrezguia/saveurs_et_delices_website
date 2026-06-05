@@ -17,7 +17,7 @@
  <header class="header">
 
    <a href="/SAVEURS_ET_DELICES/public-pages/index.php" class="logo" aria-label="Aller à l'accueil">
-        <img src="logo.webp"
+        <img src="/SAVEURS_ET_DELICES/assets/images/logos/logo.webp"
          class="logo-img"
           alt="Logo Saveurs & Délices"
           width="81"

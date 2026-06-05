@@ -12,9 +12,6 @@ $article = new Article($pdo);
 
 $action = $_POST["action"] ?? $_GET["action"] ?? "";
 
-
-
-
 function uploadImage($inputName = "image") {
 
     if (!isset($_FILES[$inputName])) {
@@ -36,7 +33,6 @@ function uploadImage($inputName = "image") {
     if (!is_dir($uploadDir)) {
         mkdir($uploadDir, 0777, true);
     }
-
 
     $extension = strtolower(pathinfo($_FILES[$inputName]["name"], PATHINFO_EXTENSION));
 
@@ -68,6 +64,14 @@ function uploadImage($inputName = "image") {
 
 if ($action === "create") {
 
+    if (empty($_POST["id_categorie"])) {
+        echo json_encode([
+            "success" => false,
+            "message" => "Catégorie obligatoire"
+        ]);
+        exit;
+    }
+
     $upload = uploadImage("image");
 
     if ($upload["status"] === false) {
@@ -90,13 +94,19 @@ if ($action === "create") {
     ]);
 
     exit;
-
-    
 }
 
 if ($action === "update") {
 
     $id = $_POST["id"] ?? null;
+
+    if (empty($_POST["id_categorie"])) {
+        echo json_encode([
+            "success" => false,
+            "message" => "Catégorie obligatoire"
+        ]);
+        exit;
+    }
 
     $oldArticle = $article->getById($id);
 
@@ -168,4 +178,3 @@ echo json_encode([
     "success" => false,
     "message" => "Action inconnue"
 ]);
-

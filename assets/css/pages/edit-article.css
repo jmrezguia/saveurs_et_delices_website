@@ -150,6 +150,30 @@ body{
   outline:none;
   font-size:14px;
 }
+/* INGREDIENTS - PREPARATION - CUISSON */
+
+.form-group textarea,
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group textarea:focus,
+.form-group input[type="text"]:focus {
+    outline: none;
+    border-color: #9b6a43;
+    box-shadow: 0 0 5px rgba(155, 106, 67, 0.2);
+}
 
 .form-grid{
   display:grid;
