@@ -3,34 +3,32 @@
    formulaire-s&d.css
     */
 
-
 /*  Remise à zéro des marges par défaut du navigateur */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /*  Style général de la page  */
 body {
-    font-family: Georgia, serif;
-    background-color:white; /* fond blanc */
-    color: #2d2a26;            /* texte brun foncé */
+  font-family: Georgia, serif;
+  background-color: white; /* fond blanc */
+  color: #2d2a26; /* texte brun foncé */
 }
-
 
 /* 
    BARRE DE NAVIGATION
     */
 
-.header{
-  width:100%;
-  height:100px;
-  background:#c6d1c1;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:0 70px;
+.header {
+  width: 100%;
+  height: 100px;
+  background: #c6d1c1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
 }
 
 .logo {
@@ -61,41 +59,39 @@ body {
   font-weight: 600;
 }
 
-.nav{
-  display:flex;
-  gap:50px;
+.nav {
+  display: flex;
+  gap: 50px;
 }
 
-.nav a{
-    
-  text-decoration:none;
-  color:#222;
-  font-size:14px;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  transition:0.3s;
+.nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+  white-space: nowrap;
 }
 
-.nav a:hover{
-  color:#80906f;
+.nav a:hover {
+  color: #80906f;
 }
 
-.login{
-  text-decoration:none;
-  color:#22222290;
-  font-weight:bold;
-  display:flex;
-  align-items:center;
-  gap:8px;
+.login {
+  text-decoration: none;
+  color: #22222290;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.login:hover{
-  color:#d9534f;
+.login:hover {
+  color: #d9534f;
 }
 
-<<<<<<< HEAD
-=======
 .nav-toggle {
   display: none;
   background: transparent;
@@ -106,31 +102,45 @@ body {
   z-index: 1200;
 }
 
->>>>>>> 2a5e71f (add all files from walid)
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  order: 3;
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border: none;
+  color: #526e5a;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 1301;
+}
 /* 
    CONTENU PRINCIPAL
     */
 
 main {
-    max-width: 920px;       /* largeur maximale centrée */
-    margin: 0 auto;
-    padding: 36px 20px 48px;
+  max-width: 920px; /* largeur maximale centrée */
+  margin: 0 auto;
+  padding: 36px 20px 48px;
 }
 
 /* Titre "contactez-nous" souligné et centré */
 .titre-page {
-    text-align: center;
-    text-decoration: underline;
-    font-size: 1.75rem;
-    margin-bottom: 8px;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.75rem;
+  margin-bottom: 8px;
+  text-decoration: none;
 }
 
 /* Phrase d'accroche sous le titre */
 .sous-titre {
-    text-align: center;
-    color: #6b6560;
-    font-size: 0.92rem;
-    margin-bottom: 36px;
+  text-align: center;
+  color: #6b6560;
+  font-size: 0.92rem;
+  margin-bottom: 36px;
 }
 
 /* 
@@ -138,287 +148,309 @@ main {
  */
 
 .grille-contenu {
-    display: grid;
-    grid-template-columns: 1fr 1.75fr; /* colonne gauche plus étroite */
-    gap: 22px;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 1fr 1.75fr; /* colonne gauche plus étroite */
+  gap: 22px;
+  align-items: start;
 }
 
 /* Chaque colonne empile ses cartes l'une sous l'autre */
 .colonne-gauche,
 .colonne-droite {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
-
 
 /* ============================================
    CARTES COORDONNÉES ET HORAIRES
    ============================================ */
 
 .carte {
-    background-color: #ebdfd5;
-    border: 2px solid #8B9D83;
-    border-radius: 8px;
-    padding: 20px 22px;
+  background-color: #ebdfd5;
+  border: 2px solid #ac7f5e;
+  border-radius: 8px;
+  padding: 20px 22px;
 }
 
 .carte h3 {
-    font-size: 0.98rem;
-    font-weight: bold;
-    margin-bottom: 16px;
+  font-size: 0.98rem;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
 
 /* --- Carte "Nos coordonnées" --- */
 
 .carte-coordonnees h3 {
-    text-align: center;
+  text-align: center;
 }
 
 .carte-coordonnees address {
-    font-style: normal;         /* annule l'italique par défaut de <address> */
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+  font-style: normal; /* annule l'italique par défaut de <address> */
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: max-content;
+  margin: 0 auto;
 }
 
 .carte-coordonnees address p {
-    font-size: 0.83rem;
-    color: #181615;
-    line-height: 1.6;
+  font-size: 0.83rem;
+  color: #181615;
+  line-height: 1.6;
+  text-align: center;
 }
 
 .carte-coordonnees a {
-    color: #6b6560;
-    text-decoration: none;
+  color: #6b6560;
+  text-decoration: none;
 }
 
 .carte-coordonnees a:hover {
-    color: #b07850;
-    text-decoration: underline;
+  color: #b07850;
+  text-decoration: underline;
 }
 
 /* --- Carte "Horaires de réponse" --- */
 
 .carte-horaires {
-    border: 2.5px solid #AC7F5E; /* bordure terracotta */
-    background-color: rgb(245, 243, 243);
+  border: 2.5px solid #ac7f5e; /* bordure terracotta */
+  background-color: rgb(245, 243, 243);
 }
 
 .carte-horaires p {
-    font-size: 0.84rem;
-    margin-bottom: 6px;
+  font-size: 0.84rem;
+  margin-bottom: 6px;
 }
-
 
 /*==
    FORMULAIRE DE CONTACT
     */
 
 .carte-formulaire {
-    background-color: #8B9D83; /* fond vert sauge */
-    border-radius: 8px;
-    padding: 24px 26px;
+  background-color: #8b9d83; /* fond vert sauge */
+  border-radius: 8px;
+  padding: 24px 26px;
 }
 
 .carte-formulaire h3 {
-    color: #ffffff;
-    font-size: 0.98rem;
-    text-align: center;
-    margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 0.98rem;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 /* Nom + Email côte à côte sur la même ligne */
 .ligne-formulaire {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 /* Bloc label + champ de saisie */
 .groupe-champ {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 12px;
 }
 
 /* Pas de marge en bas pour les groupes dans la ligne */
 .ligne-formulaire .groupe-champ {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .groupe-champ label {
-    font-size: 0.78rem;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
+  font-size: 0.78rem;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
 }
 
-<<<<<<< HEAD
-=======
 /* Appliquer le style blanc au titre RGPD */
 .titre-rgpd {
-    font-size: 0.78rem;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    margin: 0; /* Évite un espace inutile au-dessus de la checkbox */
+  font-size: 0.78rem;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin: 0; /* Évite un espace inutile au-dessus de la checkbox */
 }
 
 /* Aligner la checkbox et son texte horizontalement */
 .groupe-checkbox {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start; /* Aligne la case avec le début du texte si le texte passe sur 2 lignes */
-    gap: 10px; /* Espace entre la case et le texte */
-    margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Aligne la case avec le début du texte si le texte passe sur 2 lignes */
+  gap: 10px; /* Espace entre la case et le texte */
+  margin-top: 5px;
 }
 
 /* Éviter que la checkbox hérite du padding des autres champs */
 .groupe-checkbox input[type="checkbox"] {
-    padding: 0;
-    width: auto;
-    margin-top: 2px; /* Petit ajustement pour l'aligner parfaitement avec le texte */
+  padding: 0;
+  width: auto;
+  margin-top: 2px; /* Petit ajustement pour l'aligner parfaitement avec le texte */
 }
 
->>>>>>> 2a5e71f (add all files from walid)
 /* L'astérisque rouge des champs obligatoires */
 .obligatoire {
-    color: #ffaaaa;
+  color: #ffaaaa;
 }
 
 /* Champs texte et email */
 .groupe-champ input,
 .groupe-champ textarea {
-    padding: 8px 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.88);
-    font-size: 0.85rem;
-    font-family: Georgia, serif;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.88);
+  font-size: 0.85rem;
+  font-family: Georgia, serif;
 }
 
 .groupe-champ input:focus,
 .groupe-champ textarea:focus {
-    outline: 2px solid white; /* contour blanc quand on clique dans le champ */
+  outline: 2px solid white; /* contour blanc quand on clique dans le champ */
 }
 
 /* Zone de texte pour le message */
 .groupe-champ textarea {
-    min-height: 130px;
-    resize: vertical; /* l'utilisateur peut agrandir verticalement */
+  min-height: 130px;
+  resize: vertical; /* l'utilisateur peut agrandir verticalement */
 }
 
 /* Bouton "Envoyer" */
 .bouton-envoyer {
-    width: 100%;
-    padding: 12px;
-    background-color: #b07850; /* terracotta */
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    font-size: 0.95rem;
-    font-family: Georgia, serif;
-    cursor: pointer;
-    letter-spacing: 0.05em;
+  width: 100%;
+  padding: 12px;
+  background-color: #b07850; /* terracotta */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: Georgia, serif;
+  cursor: pointer;
+  letter-spacing: 0.05em;
 }
 
 .bouton-envoyer:hover {
-    background-color: #c48a60; /* terracotta plus clair au survol */
+  background-color: #c48a60; /* terracotta plus clair au survol */
 }
-
 
 /* ============================================
    QUESTIONS FRÉQUENTES (FAQ)
    ============================================ */
 
 .carte-faq {
-    background-color: #f0e2d5; /* fond rose pâle */
-    border-radius: 8px;
-    padding: 20px 22px;
+  background-color: #f0e2d5; /* fond rose pâle */
+  border-radius: 8px;
+  padding: 20px 22px;
 }
 
 .carte-faq h3 {
-    font-size: 0.88rem;
-    font-weight: bold;
-    margin-bottom: 14px;
+  font-size: 0.88rem;
+  font-weight: bold;
+  margin-bottom: 14px;
 }
 
 .carte-faq p {
-    font-size: 0.82rem;
-    line-height: 1.5;
-    margin-bottom: 6px;
-    color: #2d2a26;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin-bottom: 6px;
+  color: #2d2a26;
 }
-
 
 /* 
    PIED DE PAGE
     */
 
 /* ---------------- Footer ---------------- */
-footer{
-  margin-top:80px;
-  background:#b9c6b3;
-  text-align:center;
-  padding:40px 20px;
-  color:white;
+footer {
+  margin-top: 80px;
+  background: #b9c6b3;
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
 }
 
-footer h3{
-  margin-bottom:10px;
+footer h3 {
+  margin-bottom: 10px;
 }
 
-footer p{
-  margin-bottom:25px;
+footer p {
+  margin-bottom: 25px;
 }
 
-.socials{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  flex-wrap:wrap;
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.socials a{
-  color:white;
-  text-decoration:none;
-  display:flex;
-  align-items:center;
-  gap:8px;
+.socials a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 /* 
    VERSION MOBILE (écrans < 660px)
    */
 
 @media (max-width: 660px) {
+  /* Aligner le logo et le bouton burger */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-    /* Passer en une seule colonne */
-    .grille-contenu {
-        grid-template-columns: 1fr;
-    }
+  /* Réduire la taille du texte du logo */
+  .logo-text {
+    font-size: 1.05rem;
+  }
+  .logo-sub {
+    font-size: 0.7rem;
+  }
 
-    /* Sur mobile : formulaire en premier, coordonnées en dessous */
-    .colonne-gauche { order: 2; }
-    .colonne-droite { order: 1; }
+  /* Afficher le bouton burger */
+  .nav-toggle {
+    display: flex;
+  }
 
-    /* Réduire les marges */
-    main {
-        padding: 20px 14px;
-    }
+  /* Passer en une seule colonne */
+  .grille-contenu {
+    grid-template-columns: 1fr;
+  }
 
-    /* Masquer les liens de navigation */
-    .liens-nav {
-        display: none;
-    }
+  /* Sur mobile : formulaire en premier, coordonnées en dessous */
+  .colonne-gauche {
+    order: 2;
+  }
+  .colonne-droite {
+    order: 1;
+  }
 
-    /* Liens sociaux en colonne */
-    .liens-sociaux {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
+  /* Réduire les marges */
+  main {
+    padding: 20px 14px;
+  }
+
+  /* Masquer les liens de navigation */
+  .nav {
+    display: none;
+  }
+
+  /* Liens sociaux en colonne */
+  .liens-sociaux {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
 }

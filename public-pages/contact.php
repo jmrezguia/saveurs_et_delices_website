@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 <?php
 ini_set('display_errors',true);
 ?>
->>>>>>> 2a5e71f (add all files from walid)
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,48 +18,6 @@ ini_set('display_errors',true);
     ============================= -->
    <!-- ======================= HEADER ======================= -->
  <header class="header">
-<<<<<<< HEAD
-
-   <a href="/SAVEURS_ET_DELICES/public-pages/index.php" class="logo" aria-label="Aller à l'accueil">
-        <img src="logo.webp"
-         class="logo-img"
-          alt="Logo Saveurs & Délices"
-          width="81"
-          height="66"
-          loading="eager"
-           />
-           <div class="logo-texts">
-            <span class="logo-text">SAVEURS & DÉLICES</span>
-            <span class="logo-sub">Blog culinaire gourmand</span>
-           </div>
-    </a>
-
-    <nav class="nav">
-
-      <a href="#">
-        <i class="fa-solid fa-house"></i>
-        Accueil
-      </a>
-
-      <a href="#">
-        <i class="fa-solid fa-circle-info"></i>
-        À propos
-      </a>
-
-      <a href="#">
-        <i class="fa-solid fa-envelope"></i>
-        Contacts
-      </a>
-
-    </nav>
-
-    <a href="#" class="login">
-      <i class="fa-solid fa-arrow-right-to-bracket"></i>
-      Connexion
-    </a>
-
-  </header>
-=======
   <a href="/SAVEURS_ET_DELICES/public-pages/index.php" class="logo">
     <img src="/SAVEURS_ET_DELICES/assets/images/logos/logo.webp" class="logo-img" alt="Logo Saveurs & Délices" width="81" height="66">
 
@@ -86,7 +41,6 @@ ini_set('display_errors',true);
   </a>
   </nav>
 </header>
->>>>>>> 2a5e71f (add all files from walid)
     <!-------
          CONTENU PRINCIPAL
     ------>
@@ -137,7 +91,7 @@ ini_set('display_errors',true);
                 <!-- Formulaire de contact -->
                 <section class="carte-formulaire" aria-label="Formulaire de contact">
                     <h3>Envoyez-nous un message</h3>
-                    <form action="" method="POST" id="myform">
+                    <form action="/SAVEURS_ET_DELICES/admin/traitement.php" method="POST" id="myform">
 
                         <!-- Nom + Email sur la même ligne -->
                         <div class="ligne-formulaire">
@@ -161,18 +115,15 @@ ini_set('display_errors',true);
                             <textarea id="message" name="message" required></textarea>
                         </div>
 
-<<<<<<< HEAD
-=======
                         <div class="groupe-champ">
-                            <p classe="titre-rgpd">RGPD </p>
+                            <p class="titre-rgpd">RGPD </p>
 
                            <div class="groupe-checkbox">
                             <input type="checkbox" id="accept" name="RGPD" required>
                             <label for="accept"> J’accepte que les données renseignées dans ce formulaire soient utilisées uniquement pour répondre à ma demande.<span class="obligatoire" aria-label="champ obligatoire">*</span></label>
                            </div> 
                              
->>>>>>> 2a5e71f (add all files from walid)
-                        <button type="submit" class="bouton-envoyer"> <i class="fa-regular fa-paper-plane"></i> Envoyer</button>
+                        <button type="submit" class="bouton-envoyer" name="Envoyer"> <i class="fa-regular fa-paper-plane"></i> Envoyer</button>
 
                     </form>
                 </section>
